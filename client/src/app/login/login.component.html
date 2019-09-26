@@ -1,0 +1,22 @@
+<div>
+    <form class="form-login" id="form-login">
+        <img class="mb-4" src="assets/img/lock.png" alt="Login" id="lock" />
+
+        <h1 class="h3 mb-3 font-weight-normal">Please Log in</h1>
+
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus />
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required />
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit" id="submitBtn">Log in</button>
+        <a class="btn btn-lg btn-success btn-block" href="/register" role="button">Not a Member?  Register Here!</a>
+
+        <button class="btn btn-lg btn-secondary btn-block" type="button" id="resetBtn">Reset</button>
+
+        <button class="btn btn-lg btn-info btn-block hidden" type="button" id="logoutBtn">Log out</button>
+        <br />
+        <div class="alert alert-success hidden" role="alert" id="msg"></div>
+
+    </form>
+</div>
