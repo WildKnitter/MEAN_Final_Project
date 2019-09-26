@@ -8,6 +8,13 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
 
+const appRoutes: Routes = [
+  // {path: '', component: HomeComponent},
+  // {path: 'login', component: LoginComponent},
+  // {path: 'register', component: RegisterComponent},
+  // {path: 'manager', component: ManagerComponent}
+];
+
 @NgModule({
   declarations: [
     AppComponent,

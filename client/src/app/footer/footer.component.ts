@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
   // @Component Decorator
   @Component({
@@ -6,10 +6,11 @@ import { Component } from '@angular/core';
     templateUrl: './footer.component.html',
     styleUrls: ['./footer.component.css']
   })
-  export class FooterComponent {
-    currentYear: number = 2019;
+  export class FooterComponent implements OnInit {
 
-    getCurrentYear(): number {
-      return this.currentYear;
+    constructor() { }
+  
+    ngOnInit() {
     }
+  
   }
