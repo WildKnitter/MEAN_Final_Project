@@ -1,0 +1,37 @@
+<div>
+    <form class="form-edituser" id="formEditUser" method="POST" action="#">
+        <img class="mb-4" src="assets/img/smallyellowgrannysquare300300.jpg" alt="YellowGrannySquare" id="imgGrannySquare" />
+
+        <h1 class="h3 mb-3 font-weight-normal">Update User Email</h1>
+
+        <!--Member Delete and Cancel container -->
+        <div id="deleteCancelChoice" class="row justify-content-md-center">
+            <div class="deleteCancelContainer border border-danger col-md-8">
+                <h3>Are you sure you wish to delete this user?</h3>
+                <div id="msgDivDelete"></div>
+                <div id="deleteCancelButtons" class="container col-md-4">
+                    <input class="btn btn-md btn-danger" id="btnYesDelete" name="btnYesDeleteTeam" type="button" value="DELETE User">
+                    <input class="btn btn-md btn-secondary" id="btnCancelAction" name="btnCancelAction" type="button" value="Cancel Action">
+                </div>
+            </div>
+        </div>
+
+        <label for="username" class="sr-only">Username</label>
+        <input type="text" id="username" class="form-control" readonly />
+
+        <label for="inputNewEmail" class="sr-only">Enter New Email Address</label>
+        <input type="email" id="inputNewEmail" class="form-control" placeholder="Enter New Email address" required autofocus />
+
+        <label for="inputConfirmNewEmail" class="sr-only">Confirm New Email Address</label>
+        <input type="email" id="inputConfirmNewEmail" class="form-control" placeholder="Confirm New Email address" required />
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit" id="submitBtn">Update Info!</button>
+        <button class="btn btn-lg btn-secondary btn-block" type="button" id="resetBtn">Reset</button>
+
+        <br />
+        <button class="btn btn-lg btn-danger btn-block" type="submit" id="deleteBtn">DELETE Account</button>
+        <br />
+        <div class="alert alert-success hidden" role="alert" id="msg"></div>
+
+    </form>
+</div>
