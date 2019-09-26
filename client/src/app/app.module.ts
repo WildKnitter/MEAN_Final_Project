@@ -7,9 +7,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
-  // {path: '', component: HomeComponent},
+   {path: '', component: HomeComponent}
   // {path: 'login', component: LoginComponent},
   // {path: 'register', component: RegisterComponent},
   // {path: 'manager', component: ManagerComponent}
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
