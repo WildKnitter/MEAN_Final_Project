@@ -50,12 +50,12 @@ This example assumes a PostgreSQL User with the following
 
 ## Server and app setup and start
 - This assumes that the user has Node.js installed globally on their machine.
-
+- Clone the MEAN_Final_Project repository to a new directory.
+- To bring in the Node Modules:
 ```
 $ mkdir server
 $ cd server
-$ npm init
-$ npm install express body-parser pg pg-hstore sequelize cors -save
+$ npm install 
 ```
 
 ## PostgreSQL Setup
