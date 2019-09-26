@@ -1,5 +1,5 @@
 # MEAN_Lab5: Server for the Capstone Project - Hip to be Square!
-Server for Capstone - Node/Express (HBS)/PostgreSQL/Sequelize
+Server for Capstone - Node/Express/PostgreSQL/Sequelize
 
 ![IndexPage](demo/public/images/sitescreenshot.jpg?raw=true "IndexPage")
 
@@ -31,6 +31,7 @@ http://localhost:3000/users
 http://localhost:3000/leagues
 
 - Teams Data from JSON file teams
+http://localhost:3000/teams
 
 ## Technologies
 - HTML5/CSS3/Bootstrap4
@@ -72,7 +73,6 @@ $ node seed
 + to run in development mode, to use the debugger, run ```npm run dev``` to start the server
 + Test using Postman Collection
 
-- To view the index/home page in the browser, you would go to:
-http://localhost:3000/
+
 
 
