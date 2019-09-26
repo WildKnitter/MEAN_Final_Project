@@ -1,0 +1,37 @@
+[{
+        "username": "foobar",
+        "email": "foobar@test.com",
+        "password": "password",
+        "is_admin": 0
+    },
+    {
+        "username": "finkyfoo",
+        "email": "finkyfoo@test.com",
+        "password": "password",
+        "is_admin": 0
+    },
+    {
+        "username": "pbelknap",
+        "email": "pbelknap@cox.net",
+        "password": "password",
+        "is_admin": 1
+    },
+    {
+        "username": "curly",
+        "email": "curly@gmail.com",
+        "password": "password",
+        "is_admin": 0
+    },
+    {
+        "username": "bethm",
+        "email": "platosmom@test.com",
+        "password": "test",
+        "is_admin": 0
+    },
+    {
+        "username": "aradia",
+        "email": "aradia@test.com",
+        "password": "test",
+        "is_admin": 0
+    }
+]
