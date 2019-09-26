@@ -1,0 +1,25 @@
+<div>
+    <form class="form-register" id="form-register" method="POST" action="/login">
+        <img class="mb-4" src="assets/img/lock.png" alt="Lock Sign" id="lock" />
+
+        <h1 class="h3 mb-3 font-weight-normal">Register Here!</h1>
+
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus />
+
+        <label for="inputEmail" class="sr-only">Enter Email Address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required />
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required />
+        <label for="inputConfirmPassword" class="sr-only">Confirm Password</label>
+        <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirm Password" required />
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit" id="submitBtn">Register</button>
+        <button class="btn btn-lg btn-secondary btn-block" type="button" id="resetBtn">Reset</button>
+
+        <br />
+        <div class="alert alert-success hidden" role="alert" id="msg"></div>
+
+    </form>
+</div>
