@@ -11,7 +11,8 @@ export class UserService {
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
-    })
+    }),
+    withCredentials:true
   };
 
   private authenticated: boolean = false;
@@ -34,7 +35,7 @@ export class UserService {
       .pipe(map(res => <any[]>res));
   }
 
-  getUsers() {
+  getUsers(): Observable<any> {
     return this.http.get(this.usersEndpoint, this.httpOptions)
     .pipe(map(res => <any[]>res));
   }
