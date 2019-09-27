@@ -41,8 +41,14 @@ constructor(private userService: UserService, private router: Router) {}
           this.errMsg = 'Login unsuccessful.';
           this.error = true;
           this.userService.setAuthStatus(false);
-        } else {
-          this.userService.setAuthStatus(true);
+        } else {          
+          if (data['is_admin'] == 1)
+          {
+            this.userService.setAdminStatus(true);
+            this.userService.setAuthStatus(true);
+          }
+          
+          //console.log(data);
           this.router.navigate(['teams'], {queryParams: {userame: this.username}});
         }
       });
