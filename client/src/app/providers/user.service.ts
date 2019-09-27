@@ -14,6 +14,9 @@ export class UserService {
     })
   };
 
+  private authenticated: boolean = false;
+  private administrator: boolean = false;
+
   constructor(private http: HttpClient) { }
 
   login(username: string, password: string) {
@@ -35,4 +38,21 @@ export class UserService {
     return this.http.get(this.usersEndpoint, this.httpOptions)
     .pipe(map(res => <any[]>res));
   }
+
+  setAuthStatus(status: boolean) {
+    this.authenticated = status;
+  }
+
+  getAuthStatus() {
+    return this.authenticated;
+  }
+
+  setAdminStatus(status: boolean) {
+    this.administrator = status;
+  }
+
+  getAdminStatus() {
+    return this.administrator;
+  }
+
 }
