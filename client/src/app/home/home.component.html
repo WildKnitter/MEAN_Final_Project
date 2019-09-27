@@ -58,7 +58,10 @@
             <h2 class="featurette-heading">Join the fun, for a good cause...many, in fact!</h2>
             <p class="lead">Hip to be Square consists of teams of knitters and crocheters who are banding together to create squares to be joined into afghans to donate to local organizations in need of warm blankets. We support:</p>
             <!-- Dynamically-created list for the Organizations -->
-            <div id="leagueList">
+            <div *ngFor="let league of leagues" id="{{league.Code}}">
+                <ul>
+                    <li>{{league.Name}}</li>
+                </ul>
             </div>
         </div>
         <div class="col-md-6">
