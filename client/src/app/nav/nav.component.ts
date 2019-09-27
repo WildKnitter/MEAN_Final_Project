@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { UserService } from './../providers/user.service';
+import {AuthService } from './../providers/auth.service';
 
 @Component({
   selector: 'app-nav',
@@ -9,11 +9,13 @@ import { UserService } from './../providers/user.service';
 })
 export class NavComponent implements OnInit {
 
-  private authenticated: boolean = false;
+  private isAuthenticated: boolean = false;
+  private isAdmin: boolean = false;
 
-  constructor(private userService: UserService,) { }
+  constructor(private authService: AuthService,) { }
 
   ngOnInit() {
-    this.authenticated = this.userService.getAuthStatus();
+    this.isAuthenticated = this.authService.getAuth();
+    this.isAdmin = this.authService.getAdmin();
   }
 }

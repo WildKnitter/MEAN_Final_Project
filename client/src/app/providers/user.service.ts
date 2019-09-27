@@ -14,8 +14,6 @@ export class UserService {
     })
   };
 
-  private authenticated: boolean = false;
-
   constructor(private http: HttpClient) { }
 
   login(username: string, password: string) {
@@ -36,13 +34,5 @@ export class UserService {
   getUsers() {
     return this.http.get(this.usersEndpoint, this.httpOptions)
     .pipe(map(res => <any[]>res));
-  }
-
-  setAuthStatus(status: boolean) {
-    this.authenticated = status;
-  }
-
-  getAuthStatus() {
-    return this.authenticated;
   }
 }
