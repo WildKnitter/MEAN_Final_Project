@@ -20,12 +20,12 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   login(username: string, password: string) {
-    return this.http.post(`${this.usersEndpoint}login`, {username : username, password : password}, this.httpOptions)
+    return this.http.post(`${this.usersEndpoint}login`, {username: username, password: password}, this.httpOptions)
       .pipe(map(res => <any[]>res));
   }
   
-  register(username: string, password: string, email: string) {
-    return this.http.post(`${this.usersEndpoint}register`, { username: username, password: password, email: email }, this.httpOptions)
+  register(username: string, email: string, password: string) {
+    return this.http.post(`${this.usersEndpoint}register`, { username: username, email: email, password: password }, this.httpOptions)
       .pipe(map(res => <any[]>res));
   }
 

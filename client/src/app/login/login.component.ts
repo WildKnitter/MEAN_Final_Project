@@ -43,7 +43,7 @@ constructor(private userService: UserService, private router: Router) {}
           this.userService.setAuthStatus(false);
         } else {
           this.userService.setAuthStatus(true);
-          this.router.navigate(['teams']);
+          this.router.navigate(['teams'], {queryParams: {userame: this.username}});
         }
       });
     } // end onSubmit()
