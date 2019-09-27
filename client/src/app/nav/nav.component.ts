@@ -39,7 +39,15 @@ export class NavComponent implements OnInit {
     this.router.navigate(['login']);
   }
 
-  goLogout(): void {
-    this.router.navigate(['/']);
+  goRegister(): void {
+    this.router.navigate(['register']);
   }
+
+  isAuth(): boolean {
+    return this.userService.getAuthStatus();
+  }  
+
+  isAdmin(): boolean {
+    return this.userService.getAdminStatus();
+  }  
 }
