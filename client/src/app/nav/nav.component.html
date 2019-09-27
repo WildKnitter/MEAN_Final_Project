@@ -8,25 +8,25 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" (click)="goHome()">Home<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="/patterns">Patterns</a>
-                </li>
+                </li> -->
                 <li *ngIf="authenticated" class="nav-item" id="teamLink">
-                    <a class="nav-link" href="/teams">Teams</a>
+                    <a class="nav-link" (click)="goTeams()">Teams</a>
                 </li>
                 <li *ngIf="authenticated" class="nav-item" id="managerLink">
-                    <a class="nav-link" href="/manager">Edit Profile</a>
+                    <a class="nav-link" (click)="goManager()">Edit Profile</a>
                 </li>
                 <li *ngIf="administrator" class="nav-item" id="adminLink">
-                    <a class="nav-link" href="/admin">Admin</a>
+                    <a class="nav-link" (click)="goAdmin()">Admin</a>
                 </li>
                 <li class="nav-item" id="loginLink">
-                    <a class="nav-link" href="/login">Login</a>
+                    <a class="nav-link" (click)="goLogin()">Login</a>
                 </li>
                 <li *ngIf="authenticated" class="nav-item" id="logoutLink">
-                    <a class="nav-link" href="/">Logout</a>
+                    <a class="nav-link" href="/"></a>
                 </li>
             </ul>
         </div>
