@@ -13,20 +13,23 @@
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="/patterns">Patterns</a>
                 </li> -->
-                <li *ngIf="authenticated" class="nav-item" id="teamLink">
+                <li *ngIf="isAuth()" class="nav-item" id="teamLink">
                     <a class="nav-link" (click)="goTeams()">Teams</a>
                 </li>
-                <li *ngIf="authenticated" class="nav-item" id="managerLink">
+                <li *ngIf="isAuth()" class="nav-item" id="managerLink">
                     <a class="nav-link" (click)="goManager()">Edit Profile</a>
                 </li>
-                <li *ngIf="administrator" class="nav-item" id="adminLink">
+                <li *ngIf="isAdmin()" class="nav-item" id="adminLink">
                     <a class="nav-link" (click)="goAdmin()">Admin</a>
                 </li>
-                <li class="nav-item" id="loginLink">
+                <li *ngIf="!isAuth()" class="nav-item" id="loginLink">
                     <a class="nav-link" (click)="goLogin()">Login</a>
                 </li>
-                <li *ngIf="authenticated" class="nav-item" id="logoutLink">
-                    <a class="nav-link" href="/"></a>
+                <li *ngIf="!isAuth()" class="nav-item" id="registerLink">
+                    <a class="nav-link" (click)="goRegister()">Register</a>
+                </li>
+                <li *ngIf="isAuth()" class="nav-item" id="logoutLink">
+                    <a class="nav-link" href="/">Logout</a>
                 </li>
             </ul>
         </div>
