@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { UserService } from './../providers/user.service';
+
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  private authenticated: boolean = false;
+
+  constructor(private userService: UserService,) { }
 
   ngOnInit() {
+    this.authenticated = this.userService.getAuthStatus();
   }
-
 }

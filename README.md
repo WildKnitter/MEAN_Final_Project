@@ -1,7 +1,7 @@
 # MEAN_Lab5: Server for the Capstone Project - Hip to be Square!
 Server for Capstone - Node/Express/PostgreSQL/Sequelize
 
-![IndexPage](demo/public/images/sitescreenshot.jpg?raw=true "IndexPage")
+![IndexPage](client/assets/img/sitescreenshot.jpg?raw=true "IndexPage")
 
 ## Site Author
 * **Pamela W Belknap** - HartCode Academy 2019
