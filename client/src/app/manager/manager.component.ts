@@ -27,11 +27,6 @@ export class ManagerComponent implements OnInit {
         this.ID = params['ID'];
         this.username = params['username'];
       });
-
-    this.userService.getUsers().subscribe(data => {
-      this.username = data.username;
-      this.email = data.email;
-    })
   } // end of ngOnInit()
 
   onSubmit(): void {
@@ -61,7 +56,8 @@ export class ManagerComponent implements OnInit {
   } // end of onSubmit
 
   onReset(): void {
-    this.router.navigate(['teams'], {queryParams: { ID: this.ID, username: this.username }})
+    this.email = '';
+    this.confirmEmail = '';
   } // end of onReset
   
 

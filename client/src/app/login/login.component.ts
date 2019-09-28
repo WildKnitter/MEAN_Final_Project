@@ -47,12 +47,18 @@ constructor(private userService: UserService, private router: Router) {}
           {
             this.userService.setAdminStatus(true);
             this.userService.setAuthStatus(true);
-          }          
-          //console.log(data);
-          this.ID = data['ID'];
-          this.username = data['username'];
-          this.userService.setAuthStatus(true);
-          this.router.navigate(['teams'], {queryParams: {ID: this.ID, username: this.username}});
+            this.ID = data['ID'];
+            this.username = data['username'];
+            this.router.navigate(['teams'], {queryParams: {ID: this.ID, username: this.username}});
+          }
+          if (data['is_admin'] == 0)
+          {
+            this.userService.setAdminStatus(false);
+            this.userService.setAuthStatus(true);
+            this.ID = data['ID'];
+            this.username = data['username'];
+            this.router.navigate(['teams'], {queryParams: {ID: this.ID, username: this.username}});
+          }
         }
       });
     } // end onSubmit()

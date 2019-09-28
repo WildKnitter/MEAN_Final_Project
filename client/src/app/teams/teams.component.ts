@@ -30,10 +30,10 @@ export class TeamsComponent implements OnInit
         this.username = params['username'];
       })
 
-    // if (!this.userService.getAuthStatus())
-    // {
-    //   this.router.navigate(['/']);
-    // }
+    if (!this.userService.getAuthStatus())
+     {
+       this.router.navigate(['/']);
+     }
   
   // calling getLeagues() method in LeagueService
   this.leagueService.getLeagues().subscribe(data => {
