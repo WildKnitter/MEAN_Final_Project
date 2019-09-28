@@ -49,6 +49,7 @@ constructor(private userService: UserService, private router: Router) {}
             this.userService.setAuthStatus(true);
           }          
           //console.log(data);
+          this.ID = data['ID'];
           this.userService.setAuthStatus(true);
           this.router.navigate(['teams'], {queryParams: {ID: this.ID}});
         }
