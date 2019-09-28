@@ -1,4 +1,7 @@
 <app-nav></app-nav>
+
+<!--Admin Page for the Hip to be Square Capstone Project.-->
+
 <main>
     <!--Heading-->
     <div class="container">
@@ -13,14 +16,24 @@
         <h3 class="lead">Non-Admin Users</h3>
     </div>
 
-    <div class="row justify-content-md-center">
-        <div class="col-md-7 offset-md-3">
-            <!-- Dynamically-created list for the Organizations -->
-            <div *ngFor="let user of users" id="{{user.ID}}">
-                <ul>
-                    <li>{{user.username}} {{user.email}}</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <!--This listing displays users and automatically numbers the columns.-->
+    <section class="container-fluid d-flex justify-content-center">
+        <table id="nonAdminUsers" class="tables table-striped table-bordered col-lg-6">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th>User Name</th>
+                    <th>Email Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users; index as i">
+                    <th scope="row">{{ i + 1 }}</th>
+                    <td>{{user.username}}</td>
+                    <td>{{user.email}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
 </main>

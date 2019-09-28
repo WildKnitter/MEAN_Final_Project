@@ -46,10 +46,10 @@ constructor(private userService: UserService, private router: Router) {}
           {
             this.userService.setAdminStatus(true);
             this.userService.setAuthStatus(true);
-          }
-          
+          }          
           //console.log(data);
-          this.router.navigate(['teams'], {queryParams: {userame: this.username}});
+          this.userService.setAuthStatus(true);
+          this.router.navigate(['teams'], {queryParams: {ID: this.ID}});
         }
       });
     } // end onSubmit()

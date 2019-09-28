@@ -5,20 +5,8 @@
 
         <h1 class="h3 mb-3 font-weight-normal">Update User Email</h1>
 
-        <!--Member Delete and Cancel container -->
-        <div id="deleteCancelChoice" class="row justify-content-md-center">
-            <div class="deleteCancelContainer border border-danger col-md-8">
-                <h3>Are you sure you wish to delete this user?</h3>
-                <div id="msgDivDelete"></div>
-                <div id="deleteCancelButtons" class="container col-md-6">
-                    <button class="btn btn-md btn-danger" id="btnYesDelete" name="btnYesDeleteTeam" type="button" (click)="onDelete(users.ID)">DELETE User</button>
-                    <button class="btn btn-md btn-secondary" id="btnCancelAction" name="btnCancelAction" type="button" (click)="onReset()">Cancel Action</button>
-                </div>
-            </div>
-        </div>
-
         <label for="username" class="sr-only ">Username</label>
-        <input type="text " id="username" name="username" class="form-control " [(ngModel)]="username" readonly />
+        <input type="text" id="username" name="username" class="form-control" [(ngModel)]="username" readonly />
 
         <label for="email" class="sr-only ">Enter New Email Address</label>
         <input type="email" id="email" name="email" [(ngModel)]="email" class="form-control" placeholder="Enter New Email address" required autofocus />
@@ -26,12 +14,12 @@
         <label for="confirmEmail" class="sr-only ">Confirm New Email Address</label>
         <input type="email" id="confirmEmail" name="confirmEmail" [(ngModel)]="confirmEmail" class="form-control" placeholder="Confirm New Email address " required />
 
-        <button class="btn btn-lg btn-primary btn-block " type="submit " id="submitBtn " (click)="onSubmit()">Update Info!</button>
-        <button class=" btn btn-lg btn-secondary btn-block " type="button " id="resetBtn " (click)="onReset() ">Reset</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" id="submitBtn" (click)="onSubmit()">Update Info!</button>
+        <button class=" btn btn-lg btn-secondary btn-block" type="button" id="resetBtn" (click)="onReset()">Reset</button>
         <br />
-        <button class="btn btn-lg btn-danger btn-block " type="submit " id="deleteBtn ">DELETE Account</button>
+        <button class="btn btn-lg btn-danger btn-block" type="submit" id="deleteBtn" (click)="onDelete(users.ID)">DELETE Account</button>
         <br />
-        <div class="alert alert-success hidden " role="alert " id="msg "></div>
+        <div class="alert alert-success hidden" role="alert" id="msg"></div>
     </form>
 </div>
 <div class="container">

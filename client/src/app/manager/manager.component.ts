@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { UserService } from './../providers/user.service';
 
 @Component({
@@ -10,8 +10,9 @@ import { UserService } from './../providers/user.service';
 export class ManagerComponent implements OnInit {
 
   // create instance of UserService
-  constructor(private userService: UserService, private router: Router) {}
+  constructor(private userService: UserService, private route: ActivatedRoute, private router: Router) {}
 
+  sub: any;
   username: string = '';
   email: string = '';
   confirmEmail: string = '';
@@ -19,8 +20,17 @@ export class ManagerComponent implements OnInit {
   errMsg: string = '';
 
   ngOnInit() {
-    
-  }
+    this.sub = this.route
+      .queryParams
+      .subscribe(params => {
+        this.ID = params['ID'];
+      });
+
+    this.userService.getUser(this.ID).subscribe(data => {
+      this.username = data.username;
+      this.email = data.email;
+    })
+  } // end of ngOnInit()
 
   onSubmit(): void {
     if (this.email == '') {
@@ -36,31 +46,29 @@ export class ManagerComponent implements OnInit {
       this.error = false;
       this.errMsg = '';
 
-      // Call UserService to Register
-      this.userService.editUser(this.username, this.email).subscribe(data => {
+      // Call UserService to edit email
+      this.userService.editUser(this.email).subscribe(data => {
         if (data['error']) {
           this.errMsg = 'Email Update Unsuccessful.';
           this.error = true;
         } else {
-          this.router.navigate(['teams']);
+          this.router.navigate(['teams'], {queryParams: { ID: this.ID }});
         }
-      });
+      }); // end of editUser 
     }
-  }
+  } // end of onSubmit
 
   onReset(): void {
-    this.email = '';
-    this.confirmEmail = '';
-
-    this.error = false;
-    this.errMsg = '';
-  }
+    this.router.navigate(['teams'], {queryParams: { ID: this.ID }})
+  } // end of onReset
+  
 
   onDelete(ID: number): void {
       // Call UserService to delete User
-      this.userService.deleteUser(ID).subscribe(data => {
-        //this.router.navigate(['manager']);
-        window.location.reload();
+      this.userService.deleteUser(this.ID).subscribe(data => {
+      this.userService.setAuth(false);
+      this.userService.setAdmin(false);
+      this.router.navigate(['/']);
       });
-  }
-}
+  } // end of onDelete
+} // end of export
