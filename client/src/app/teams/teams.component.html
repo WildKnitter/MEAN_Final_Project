@@ -9,20 +9,26 @@
 <!--container end -->
 
 <!--Team Dropdown Selections-->
-<form id="teamForm" name="teamForm" method="GET" action="#">
+<form id="teamForm">
     <div class="row firstRow">
         <div class="col-md-3 offset-md-1">
-            <p>Select a Team by Organization</p>
-            <select id="teamChoice" name="teamChoice">
-                <option value="zero" selected>Select One</option>
+            <label for="leagueChoice">Select a Team by Organization</label>
+            <select id="leagueChoice">
+                <option *ngFor="let league of leagues; let i = index" [value]="leagues[i].Code">
+                    {{leagues[i].Name}}
+                </option>
             </select>
         </div>
+
         <div class="col-md-3">
             <p>Select a Team by Craft</p>
-            <select id="teamType" name="teamtype">
-                <option value="zero" selected>Select One</option>
+            <select id="teamType">
+                    <option ngbDropdownItem>Select One</option>
+                    <option ngbDropdownItem>Knitting</option>
+                    <option ngbDropdownItem>Crocheting</option>
             </select>
         </div>
+
         <div class="col-md-2">
             <p>View ALL Teams</p>
             <input class="btn btn-md btn-success" id="btnAllTeams" name="btnAllTeams" type="button" value="HERE!">
@@ -46,7 +52,7 @@
 
 <!-- Illustration -->
 <div class="row">
-    <div class="col-lg-10">
+    <div class="col-lg-8">
         <div id="imgfranklinsquares"></div>
     </div>
 </div>
