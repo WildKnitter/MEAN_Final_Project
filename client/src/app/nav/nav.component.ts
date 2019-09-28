@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './../providers/user.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -9,12 +9,22 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
 
+  sub: any;
+  ID: number = 0;
+
   private authenticated: boolean = false;
   private administrator: boolean = false;
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: UserService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
+    // get user ID from Query Params
+    this.sub = this.route
+      .queryParams
+      .subscribe(params => {
+        this.ID = params['ID'];
+      })
+
     this.authenticated = this.userService.getAuthStatus();
     this.administrator = this.userService.getAdminStatus();
   }
@@ -41,6 +51,12 @@ export class NavComponent implements OnInit {
 
   goRegister(): void {
     this.router.navigate(['register']);
+  }
+
+  goLogout(): void {
+    this.userService.setAdminStatus(false);
+    this.userService.setAuthStatus(false);
+    this.router.navigate(['/']);
   }
 
   isAuth(): boolean {
