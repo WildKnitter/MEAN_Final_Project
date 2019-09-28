@@ -25,6 +25,7 @@ export class ManagerComponent implements OnInit {
       .queryParams
       .subscribe(params => {
         this.ID = params['ID'];
+        this.username = params['username'];
       });
 
     this.userService.getUsers().subscribe(data => {
@@ -48,23 +49,23 @@ export class ManagerComponent implements OnInit {
       this.errMsg = '';
 
       // Call UserService to edit email
-      this.userService.editUser(this.email).subscribe(data => {
+      this.userService.editUser(this.ID,this.email).subscribe(data => {
         if (data['error']) {
           this.errMsg = 'Email Update Unsuccessful.';
           this.error = true;
         } else {
-          this.router.navigate(['teams'], {queryParams: { ID: this.ID }});
+          this.router.navigate(['teams'], {queryParams: { ID: this.ID, username: this.username }});
         }
       }); // end of editUser 
     }
   } // end of onSubmit
 
   onReset(): void {
-    this.router.navigate(['teams'], {queryParams: { ID: this.ID }})
+    this.router.navigate(['teams'], {queryParams: { ID: this.ID, username: this.username }})
   } // end of onReset
   
 
-  onDelete(ID: number): void {
+  onDelete(): void {
       // Call UserService to delete User
       this.userService.deleteUser(this.ID).subscribe(data => {
       this.userService.setAuthStatus(false);
