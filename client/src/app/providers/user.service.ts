@@ -30,13 +30,13 @@ export class UserService {
       .pipe(map(res => <any[]>res));
   }
 
-  editUser(email: string): Observable<any> {
-    return this.http.put(`${this.usersEndpoint}editUser`, { email: email }, this.httpOptions)
+  editUser(ID: number,email: string): Observable<any> {
+    return this.http.put(`${this.usersEndpoint}editUserprofile/${ID}`, { email: email }, this.httpOptions)
       .pipe(map(res => <any[]>res));
   }
 
-  deleteUser(userId: number) {
-    return this.http.delete(`${this.usersEndpoint}${userId}`, this.httpOptions)
+  deleteUser(ID: number) {
+    return this.http.delete(`${this.usersEndpoint}editUserprofile/${ID}`, this.httpOptions)
       .pipe(map(res => <any[]>res));
   }
 

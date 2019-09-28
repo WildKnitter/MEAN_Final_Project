@@ -13,6 +13,7 @@ export class TeamsComponent implements OnInit
 
   sub: any;
   ID: number = 0;
+  username: string = '';
    // Array file to hold Leagues for Home Page.
   leagues: Array<string> = [];
 
@@ -26,6 +27,7 @@ export class TeamsComponent implements OnInit
       .queryParams
       .subscribe(params => {
         this.ID = params['ID'];
+        this.username = params['username'];
       })
 
     // if (!this.userService.getAuthStatus())

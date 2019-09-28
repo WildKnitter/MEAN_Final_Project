@@ -11,6 +11,7 @@ export class NavComponent implements OnInit {
 
   sub: any;
   ID: number = 0;
+  username: string = '';
 
   private authenticated: boolean = false;
   private administrator: boolean = false;
@@ -23,6 +24,7 @@ export class NavComponent implements OnInit {
       .queryParams
       .subscribe(params => {
         this.ID = params['ID'];
+        this.username = params['username'];
       })
 
     this.authenticated = this.userService.getAuthStatus();
@@ -30,19 +32,19 @@ export class NavComponent implements OnInit {
   }
 
   goHome(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['/'], {queryParams: {ID: this.ID, username: this.username}});
   }
   
   goTeams(): void {
-    this.router.navigate(['teams']);
+    this.router.navigate(['teams'], {queryParams: {ID: this.ID, username: this.username}});
   }
   
   goManager(): void {
-    this.router.navigate(['manager']);
+    this.router.navigate(['manager'], {queryParams: {ID: this.ID, username: this.username}});
   }
   
   goAdmin(): void {
-    this.router.navigate(['admin']);
+    this.router.navigate(['admin'], {queryParams: {ID: this.ID, username: this.username}});
   }
   
   goLogin(): void {

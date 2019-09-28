@@ -50,8 +50,9 @@ constructor(private userService: UserService, private router: Router) {}
           }          
           //console.log(data);
           this.ID = data['ID'];
+          this.username = data['username'];
           this.userService.setAuthStatus(true);
-          this.router.navigate(['teams'], {queryParams: {ID: this.ID}});
+          this.router.navigate(['teams'], {queryParams: {ID: this.ID, username: this.username}});
         }
       });
     } // end onSubmit()
