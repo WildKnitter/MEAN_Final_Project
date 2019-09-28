@@ -29,7 +29,7 @@
                     <a class="nav-link" (click)="goRegister()">Register</a>
                 </li>
                 <li *ngIf="isAuth()" class="nav-item" id="logoutLink">
-                    <a class="nav-link" href="/">Logout</a>
+                    <a class="nav-link" (click)="goLogout()">Logout</a>
                 </li>
             </ul>
         </div>

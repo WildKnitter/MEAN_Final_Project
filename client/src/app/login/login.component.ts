@@ -10,6 +10,7 @@ import { UserService } from './../providers/user.service';
 })
 export class LoginComponent implements OnInit {
 
+  ID: number 
   username: string = '';
   password: string = '';
   error: boolean = false;

@@ -13,6 +13,7 @@ export class ManagerComponent implements OnInit {
   constructor(private userService: UserService, private route: ActivatedRoute, private router: Router) {}
 
   sub: any;
+  ID: number = 0;
   username: string = '';
   email: string = '';
   confirmEmail: string = '';
@@ -26,7 +27,7 @@ export class ManagerComponent implements OnInit {
         this.ID = params['ID'];
       });
 
-    this.userService.getUser(this.ID).subscribe(data => {
+    this.userService.getUsers().subscribe(data => {
       this.username = data.username;
       this.email = data.email;
     })
@@ -66,8 +67,8 @@ export class ManagerComponent implements OnInit {
   onDelete(ID: number): void {
       // Call UserService to delete User
       this.userService.deleteUser(this.ID).subscribe(data => {
-      this.userService.setAuth(false);
-      this.userService.setAdmin(false);
+      this.userService.setAuthStatus(false);
+      this.userService.setAdminStatus(false);
       this.router.navigate(['/']);
       });
   } // end of onDelete
