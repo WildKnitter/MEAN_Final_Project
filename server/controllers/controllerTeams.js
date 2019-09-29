@@ -23,8 +23,13 @@ teamsController.getTeamsDataByLeague = (req, res) => {
     teamsService.listTeamsDataByLeague(req, res);
 };
 
+// GET http://localhost:3000/teams/data/byteamtype/:id
+teamsController.getTeamsDataByTeamType = (req, res) => {
+    teamsService.listTeamsDataByTeamType(req, res);
+};
+
 /* DELETE a Team */
-// DELETE http://localhost:3000/teamdetails/data/:id 
+// DELETE http://localhost:3000/teams/data/:id 
 teamsController.deleteTeamById = (req, res) => {
     teamsService.deleteTeam(req, res);
 };
