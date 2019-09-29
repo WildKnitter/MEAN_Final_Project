@@ -1,3 +1,5 @@
+// App Module Typescript Code for the Hip to be Square Capstone Project.
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';

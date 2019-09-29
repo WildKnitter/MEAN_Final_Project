@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LeagueService } from '../providers/league.service';
 
+// HOME Page Typescript Code for the Hip to be Square Capstone Project.
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,7 +10,7 @@ import { LeagueService } from '../providers/league.service';
 })
 export class HomeComponent implements OnInit {
 
-  // Array file to hold Leagues for Home Page.
+  // Array file to hold Leagues (Organizations) List for Home Page.
   leagues: Array<string> = [];
   
   constructor(

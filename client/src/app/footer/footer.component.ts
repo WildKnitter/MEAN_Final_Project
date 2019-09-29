@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+// Footer Component Typescript Code for the Hip to be Square Capstone Project.
+
   // @Component Decorator
   @Component({
     selector: 'app-footer',
