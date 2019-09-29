@@ -1,5 +1,4 @@
 # MEAN_Final_Project Repository for the Capstone Project - Hip to be Square!
-Server for Capstone - Node/Express/PostgreSQL/Sequelize
 
 ![IndexPage](client/src/assets/img/sitescreenshot.jpg?raw=true "IndexPage")
 
@@ -22,7 +21,18 @@ Server for Capstone - Node/Express/PostgreSQL/Sequelize
 - To be able to unregister members and delete a team.
 - To access some simple knitting and crocheting patterns to get started with their squares.
 
-## Data Rendered:
+## Site Pages:
+- Home Page
+- Login Page
+- Register Page
+- Edit User Profile Page
+- Teams Page (Landing Page)
+- Admin Page (For an Admin.  Details non-admin users)
+- Patterns Page
+
+## Server for Capstone - Node/Express/PostgreSQL/Sequelize
+
+### Data Rendered:
 
 - Users Data from ProsgreSQL file users
 http://localhost:3000/users
@@ -33,7 +43,7 @@ http://localhost:3000/leagues
 - Teams Data from JSON file teams
 http://localhost:3000/teams
 
-## Technologies
+### Technologies
 - HTML5/CSS3/Bootstrap4
 - JavaScript
 - jQuery
@@ -44,14 +54,13 @@ http://localhost:3000/teams
 
 Note: This will use [PostgreSQL](https://www.postgresql.org/) in place of [MongoDB](https://www.mongodb.com/) for our Database. 
 
-## Server and app setup and start
-- This assumes that the user has Node.js installed globally on their machine.
-- Clone the MEAN_Final_Project repository to a new directory.
-- To bring in the Node Modules:
+## Server start
++ run ```npm start``` to start the server
++ to run in development mode, to use the debugger, run ```npm run dev``` to start the server
+
 ```
-$ mkdir server
 $ cd server
-$ npm install 
+$ npm run dev 
 ```
 
 ## PostgreSQL Setup
@@ -62,12 +71,18 @@ $ npm install
 $ cd db
 $ node migrate
 $ node seed
+```
 
-## Test
-+ run ```npm start``` to start the server
-+ to run in development mode, to use the debugger, run ```npm run dev``` to start the server
-+ Test using Postman Collection
+## Client start
 
+```
+$ cd client
+$ ng serve
+...
+webpack: Compiled successfully.
+```
+- To view the home page in the browser, you would go to:
+http://localhost:4200/
 
 
 
