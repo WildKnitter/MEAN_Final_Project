@@ -19,8 +19,12 @@ export class ManagerComponent implements OnInit {
   confirmEmail: string = '';
   error: boolean = false;
   errMsg: string = '';
+  
+  // Delete Confirmation - hidden by default
+  isShown: boolean = false ; 
 
   ngOnInit() {
+
     this.sub = this.route
       .queryParams
       .subscribe(params => {
@@ -66,6 +70,9 @@ export class ManagerComponent implements OnInit {
     this.confirmEmail = '';
   } // end of onReset
   
+  toggleShow(): void {
+    this.isShown = ! this.isShown;
+  }
 
   onDelete(): void {
       // Call UserService to delete User

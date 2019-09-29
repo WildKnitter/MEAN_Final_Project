@@ -1,9 +1,28 @@
 <app-nav></app-nav>
+<!--Heading-->
+<div class="container">
+    <header>
+        <h1 class="display-3 regularHeader">Hip to be Square!</h1>
+        <h2 class="regularSubHeader">Update User Email</h2>
+    </header>
+</div>
+<!--container end -->
+
+<!--Member Delete and Cancel container -->
+<div *ngIf="isShown" id="deleteCancelChoice" class="row justify-content-md-center">
+    <div class="deleteCancelContainer border border-danger col-md-8">
+        <h3>Are you sure you wish to delete this user?</h3>
+        <div id="msgDivDelete"></div>
+        <div id="deleteCancelButtons" class="container col-md-4 offset-md-1">
+            <button class="btn btn-md btn-danger" type="submit" id="btnYesDelete" (click)="onDelete()">DELETE User</button>
+            <button class="btn btn-md btn-secondary" type="submit" id="btnCancelAction" (click)="toggleShow()">Cancel Action</button>
+        </div>
+    </div>
+</div>
+
 <div>
     <form class="form-edituser" id="form-edit">
         <img class="mb-4" src="assets/img/smallyellowgrannysquare300300.jpg" alt="YellowGrannySquare" id="imgGrannySquare" />
-
-        <h1 class="h3 mb-3 font-weight-normal">Update User Email</h1>
 
         <h2>Username: {{username}}</h2>
 
@@ -16,11 +35,12 @@
         <button class="btn btn-lg btn-primary btn-block" type="submit" id="submitBtn" (click)="onSubmit()">Update Info!</button>
         <button class="btn btn-lg btn-secondary btn-block" type="submit" id="resetBtn" (click)="onReset()">Reset</button>
         <br />
-        <button class="btn btn-lg btn-danger btn-block" type="submit" id="deleteBtn" (click)="onDelete()">DELETE Account</button>
+        <button class="btn btn-lg btn-danger btn-block" type="button" id="deleteBtn" (click)="toggleShow()">DELETE Account</button>
         <br />
         <div class="alert alert-success hidden" role="alert" id="msg"></div>
     </form>
 </div>
+
 <div class="container">
     <br />
     <div class="alert alert-danger" role="alert" id="errMsg" *ngIf="error">{{errMsg}}</div>
