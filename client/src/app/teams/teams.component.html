@@ -16,7 +16,8 @@
     <div class="row firstRow">
         <div class="col-md-3 offset-md-1">
             <label for="leagueChoice">Select a Team by Organization</label>
-            <select id="leagueChoice">
+            <select (change)="onSelect($event.target.value)" class="custom-select" id="leagueChoice">
+                <option value="zero" selected>Select One</option>
                 <option *ngFor="let league of leagues; let i = index" [value]="leagues[i].Code">
                     {{leagues[i].Name}}
                 </option>
@@ -24,8 +25,8 @@
         </div>
 
         <div class="col-md-3">
-            <p>Select a Team by Craft</p>
-            <select id="teamType">
+            <label for="teamType">Select a Team by Craft</label>
+            <select id="teamType" class="custom-select">
                     <option>Select One</option>
                     <option>Knitting</option>
                     <option>Crocheting</option>
@@ -33,12 +34,12 @@
         </div>
 
         <div class="col-md-2">
-            <p>View ALL Teams</p>
+            <label for="btnAllTeams">View ALL Teams</label>
             <button class="btn btn-md btn-success" id="btnAllTeams" type="submit" (click)="toggleShowAll()">HERE!</button>
         </div>
         <div class="col-md-2">
-            <p>Add a Team!</p>
-            <a class="btn btn-md btn-primary" href="/detailsteamadd" role="button">Add HERE!</a>
+            <label for="btnAddTeam">Add a Team!</label>
+            <a class="btn btn-md btn-primary" id="btnAddTeam" href="/detailsteamadd" role="button">Add HERE!</a>
         </div>
     </div>
 

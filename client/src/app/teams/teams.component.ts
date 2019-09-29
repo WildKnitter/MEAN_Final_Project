@@ -58,4 +58,12 @@ export class TeamsComponent implements OnInit {
     this.isShown = ! this.isShown;
   }
 
+  onSelect(value) {
+    console.log(value);
+    this.teamService.getTeamsByLeague(value).subscribe(data => {
+      this.teams = data;
+      this.isShown;
+    });
+  }
+
 } // end of export 
