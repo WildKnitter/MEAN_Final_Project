@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
 import { LeagueService } from './providers/league.service';
+import { TeamService } from './providers/team.service';
 import { UserService } from './providers/user.service';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -45,6 +46,7 @@ const appRoutes: Routes = [
   ],
   providers: [
     LeagueService,
+    TeamService,
     UserService
 ],
   bootstrap: [AppComponent]
