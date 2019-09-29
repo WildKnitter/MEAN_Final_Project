@@ -26,7 +26,7 @@ export class TeamService {
   // GET http://localhost:3000/teams/data
     getTeams(): Observable<any> {
     return this.http.get(this.teamsEndpoint, this.httpOptions)
-      .pipe(map(res => <any[]>res));
+    .pipe(map(res => <any[]>res));
     }
 
   /* GET teams data by team id. */
@@ -39,14 +39,21 @@ export class TeamService {
   /* GET Teams data by league. */
   // GET http://localhost:3000/teams/data/byleague/:id
     getTeamsByLeague(League: string): Observable<any> {
-      return this.http.get(`${this.teamsEndpoint}/byleague/${League}`, this.httpOptions)
-      .pipe(map(res => <any[]>res));
+    return this.http.get(`${this.teamsEndpoint}/byleague/${League}`, this.httpOptions)
+     .pipe(map(res => <any[]>res));
     }
+
+  /* GET Teams data by Team Type (Craft). */
+  // GET GET http://localhost:3000/teams/data/byteamtype/:id
+    getTeamsByTeamType(TeamType: string): Observable<any> {
+    return this.http.get(`${this.teamsEndpoint}/byteamtype/${TeamType}`, this.httpOptions)
+     .pipe(map(res => <any[]>res));
+  }
 
   // DELETE A TEAM
   // DELETE http://localhost:3000/teams/data/:id 
     deleteTeam(TeamId: number): Observable<any> {
-      return this.http.delete(`${this.teamsEndpoint}/${TeamId}`, this.httpOptions)
-        .pipe(map(res => <any[]>res));
+    return this.http.delete(`${this.teamsEndpoint}/${TeamId}`, this.httpOptions)
+     .pipe(map(res => <any[]>res));
     }
 }

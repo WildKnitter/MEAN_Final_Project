@@ -57,7 +57,27 @@ teamsService.listTeamsDataByLeague = (req, res) => {
     // find the matching teams for 
     let matches = getMatchingTeamsByLeague(id, data);
 
-    //console.log("Returned data is: ");
+    //logArrayOfTeams(matches);
+    res.end(JSON.stringify(matches));
+};
+
+// read TEAM DATA BY TEAM TYPE (CRAFT)
+function getMatchingTeamsByTeamType(TeamType, data) {
+    let matches = data.filter(t => t.TeamType == TeamType);
+    return matches;
+}
+
+teamsService.listTeamsDataByTeamType = (req, res) => {
+
+    let id = req.params.id;
+    console.log("Received a GET request for teams in league " + id);
+
+    let data = fs.readFileSync(`./data/teams.json`, "utf8");
+    data = JSON.parse(data);
+
+    // find the matching teams for 
+    let matches = getMatchingTeamsByTeamType(id, data);
+
     //logArrayOfTeams(matches);
     res.end(JSON.stringify(matches));
 };

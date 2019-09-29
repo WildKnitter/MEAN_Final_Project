@@ -66,4 +66,12 @@ export class TeamsComponent implements OnInit {
     });
   }
 
+  onSelectCraft(value) {
+    console.log(value);
+    this.teamService.getTeamsByTeamType(value).subscribe(data => {
+      this.teams = data;
+      this.isShown;
+    });
+  }
+
 } // end of export 

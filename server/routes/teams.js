@@ -18,6 +18,10 @@ router.get("/data/:id", controller.getTeamDataById);
 // GET http://localhost:3000/teams/data/byleague/:id
 router.get('/data/byleague/:id', controller.getTeamsDataByLeague);
 
+/* GET Teams data by TeamType (Craft). */
+// GET http://localhost:3000/teams/data/byteamtype/:id
+router.get('/data/byteamtype/:id', controller.getTeamsDataByTeamType);
+
 // DELETE A TEAM
 // DELETE http://localhost:3000/teams/data/:id 
 router.delete("/data/:id", controller.deleteTeamById);

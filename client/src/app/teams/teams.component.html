@@ -26,10 +26,10 @@
 
         <div class="col-md-3">
             <label for="teamType">Select a Team by Craft</label>
-            <select id="teamType" class="custom-select">
-                    <option>Select One</option>
-                    <option>Knitting</option>
-                    <option>Crocheting</option>
+            <select (change)="onSelectCraft($event.target.value)" class="custom-select" id="teamType">
+                <option value="Knitting" selected>Knitting</option>
+                <option value="Crocheting" selected>Crocheting</option>
+                <option value="craft" selected>Select One</option>
             </select>
         </div>
 
@@ -39,7 +39,7 @@
         </div>
         <div class="col-md-2">
             <label for="btnAddTeam">Add a Team!</label>
-            <a class="btn btn-md btn-primary" id="btnAddTeam" href="/detailsteamadd" role="button">Add HERE!</a>
+            <a class="btn btn-md btn-primary" id="btnAddTeam" href="#" role="button">Add HERE!</a>
         </div>
     </div>
 
@@ -61,7 +61,7 @@
                     <td>{{team.TeamType}}</td>
                     <td>{{team.TeamGender}}</td>
                     <td>{{team.TeamName}}</td>
-                    <td> </td>
+                    <td><a class="mr-2" title="View" href="#"><i class="fas fa-binoculars fa-lg" aria-hidden="true"></i></a><a class="edit mr-2" title="Edit" href="#"><i class="fa fa-pencil-alt fa-lg" aria-hidden="true"></i></a></td>
                 </tr>
             </tbody>
         </table>

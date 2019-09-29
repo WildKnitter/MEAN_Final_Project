@@ -293,6 +293,29 @@
 				"description": "http://localhost:3000/teams/data/109"
 			},
 			"response": []
+		},
+		{
+			"name": "GET Teams Data by TeamType",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/teams/data/byteamtype/Knitting",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"teams",
+						"data",
+						"byteamtype",
+						"Knitting"
+					]
+				},
+				"description": "http://localhost:3000/teams/data/byteamtype/Knitting"
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
