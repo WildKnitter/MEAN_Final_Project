@@ -20,6 +20,9 @@ export class TeamsComponent implements OnInit {
   // Array file to hold Teams for List.
   teams: Array<string> = [];
 
+  // Showing ALL Teams - hidden by default
+  isShown: boolean = false ; 
+
   constructor(private leagueService: LeagueService, private teamService: TeamService, private userService: UserService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() 
@@ -48,4 +51,9 @@ export class TeamsComponent implements OnInit {
     this.teams = data;
   });
   } // end of ngOnInit()
+
+  toggleShowAll(): void {
+    this.isShown = ! this.isShown;
+  }
+
 } // end of export 
