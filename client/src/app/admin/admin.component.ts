@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './../providers/user.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -11,9 +12,7 @@ export class AdminComponent implements OnInit {
   // Array file to hold data for Non-Admin users list.
   users: Array<string> = [];
   
-  constructor(
-    private userService: UserService,
-  ) { }
+  constructor( private userService: UserService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
 
@@ -21,6 +20,10 @@ export class AdminComponent implements OnInit {
     this.userService.getUsers().subscribe(data => {
       this.users = data;
     });
-  }
 
+    if (!this.userService.getAdminStatus())
+    {
+      this.router.navigate(['/']);
+    }
+  }
 }

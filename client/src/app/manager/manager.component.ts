@@ -27,6 +27,12 @@ export class ManagerComponent implements OnInit {
         this.ID = params['ID'];
         this.username = params['username'];
       });
+
+      if (!this.userService.getAuthStatus())
+      {
+        this.router.navigate(['/']);
+      }
+      
   } // end of ngOnInit()
 
   onSubmit(): void {

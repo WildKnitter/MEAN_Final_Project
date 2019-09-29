@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LeagueService } from '../providers/league.service';
+import { TeamService } from '../providers/team.service';
 import { UserService } from './../providers/user.service';
 
 @Component({
@@ -8,16 +9,18 @@ import { UserService } from './../providers/user.service';
   templateUrl: './teams.component.html',
   styleUrls: ['./teams.component.css']
 })
-export class TeamsComponent implements OnInit 
-{
+export class TeamsComponent implements OnInit {
 
   sub: any;
   ID: number = 0;
   username: string = '';
-   // Array file to hold Leagues for Home Page.
+   // Array file to hold Leagues for Drop Down List.
   leagues: Array<string> = [];
 
-  constructor(private leagueService: LeagueService, private userService: UserService, private route: ActivatedRoute, private router: Router) { }
+  // Array file to hold Teams for List.
+  teams: Array<string> = [];
+
+  constructor(private leagueService: LeagueService, private teamService: TeamService, private userService: UserService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() 
   {
@@ -38,6 +41,11 @@ export class TeamsComponent implements OnInit
   // calling getLeagues() method in LeagueService
   this.leagueService.getLeagues().subscribe(data => {
     this.leagues = data;
+  });
+
+  // calling getTeams() method in TeamService
+  this.teamService.getTeams().subscribe(data => {
+    this.teams = data;
   });
   } // end of ngOnInit()
 } // end of export 

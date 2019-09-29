@@ -26,9 +26,9 @@
         <div class="col-md-3">
             <p>Select a Team by Craft</p>
             <select id="teamType">
-                    <option ngbDropdownItem>Select One</option>
-                    <option ngbDropdownItem>Knitting</option>
-                    <option ngbDropdownItem>Crocheting</option>
+                    <option>Select One</option>
+                    <option>Knitting</option>
+                    <option>Crocheting</option>
             </select>
         </div>
 
@@ -46,8 +46,22 @@
     <div id="teamDiv">
         <table id="teamTable" class="table table-striped table-borderless table-hover">
             <thead id="teamTableHead">
+                <tr>
+                    <th>Organization Type</th>
+                    <th>Team Type</th>
+                    <th>Team Gender</th>
+                    <th>Team Name</th>
+                    <th>View/Edit</th>
+                </tr>
             </thead>
             <tbody id="teamTableBody">
+                <tr *ngFor="let team of teams" id="{{team.TeamId}}">
+                    <td>{{team.League}}</td>
+                    <td>{{team.TeamType}}</td>
+                    <td>{{team.TeamGender}}</td>
+                    <td>{{team.TeamName}}</td>
+                    <td> </td>
+                </tr>
             </tbody>
         </table>
     </div>
