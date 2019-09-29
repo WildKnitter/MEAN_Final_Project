@@ -39,22 +39,19 @@ constructor(private userService: UserService, private router: Router) {}
 
       // Call UserService authenticate the user
       this.userService.login(this.username, this.password).subscribe(data => {
-        if (data['error']) 
-        {
+        if (data['error']) {
           this.errMsg = 'Login unsuccessful.';
           this.error = true;
           this.userService.setAuthStatus(false);
         } else {          
-          if (data['is_admin'] == 1)
-          {
+          if (data['is_admin'] == 1) {
             this.userService.setAdminStatus(true);
             this.userService.setAuthStatus(true);
             this.ID = data['ID'];
             this.username = data['username'];
             this.router.navigate(['teams'], {queryParams: {ID: this.ID, username: this.username}});
           }
-          if (data['is_admin'] == 0)
-          {
+          if (data['is_admin'] == 0) {
             this.userService.setAdminStatus(false);
             this.userService.setAuthStatus(true);
             this.ID = data['ID'];
