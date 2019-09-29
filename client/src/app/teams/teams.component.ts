@@ -4,6 +4,8 @@ import { LeagueService } from '../providers/league.service';
 import { TeamService } from '../providers/team.service';
 import { UserService } from './../providers/user.service';
 
+// Teams (Landing) Page Typescript Code for the Hip to be Square Capstone Project.
+
 @Component({
   selector: 'app-teams',
   templateUrl: './teams.component.html',

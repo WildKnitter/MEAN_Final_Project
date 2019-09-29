@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 
 import { UserService } from './../providers/user.service';
 
+// Register Page Typescript Code for the Hip to be Square Capstone Project.
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -47,7 +49,7 @@ export class RegisterComponent implements OnInit {
       this.error = false;
       this.errMsg = '';
 
-      // Call UserService to Register
+      // Call UserService to Register User
       this.userService.register(this.username, this.email, this.password).subscribe(data => {
         if (data['error']) {
           this.errMsg = 'Registration unsuccessful.';

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { UserService } from './../providers/user.service';
 
+// Manager (Edit User Profile) Page Typescript Code for the Hip to be Square Capstone Project.
+
 @Component({
   selector: 'app-manager',
   templateUrl: './manager.component.html',

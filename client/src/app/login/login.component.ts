@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 
 import { UserService } from './../providers/user.service';
 
+// Login Page Typescript Code for the Hip to be Square Capstone Project.
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

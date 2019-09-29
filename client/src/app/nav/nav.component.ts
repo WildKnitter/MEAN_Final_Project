@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from './../providers/user.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
+// Nav Bar Component Typescript Code for the Hip to be Square Capstone Project.
+
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
