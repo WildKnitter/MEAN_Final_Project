@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class PatternsComponent implements OnInit {
 
-  @ViewChild('top') top: ElementRef
+  @ViewChild('top', {static: false}) top: ElementRef
 
   sub: any;
   ID: number = 0;

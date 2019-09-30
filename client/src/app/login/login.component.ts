@@ -63,6 +63,12 @@ constructor(private userService: UserService, private router: Router) {}
     } // end onSubmit()
   }
 
+  // Brings the user to the Registration Page.
+  goRegister(): void {
+    this.router.navigate(['register']);
+  }
+
+  // Resets the Login Page so that the user can try loggin in again.
   onReset(): void {
     this.username = '';
     this.password = '';
