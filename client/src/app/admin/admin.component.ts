@@ -24,8 +24,7 @@ export class AdminComponent implements OnInit {
       this.users = data;
     });
 
-    if (!this.userService.getAdminStatus())
-    {
+    if (!this.userService.getAdminStatus()) {
       this.router.navigate(['/']);
     }
   }

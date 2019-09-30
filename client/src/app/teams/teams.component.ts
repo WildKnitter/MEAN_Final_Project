@@ -13,6 +13,7 @@ import { UserService } from './../providers/user.service';
 })
 export class TeamsComponent implements OnInit {
 
+  // For the goToTop function
   @ViewChild('top', {static: false}) top: ElementRef
 
   sub: any;
@@ -31,7 +32,7 @@ export class TeamsComponent implements OnInit {
 
   ngOnInit() {
 
-    // get userid from Query Params
+    // get userid and username from Query Params
     this.sub = this.route
       .queryParams
       .subscribe(params => {
@@ -54,38 +55,37 @@ export class TeamsComponent implements OnInit {
   });
   } // end of ngOnInit()
 
+  // This function is for the "Back to top" button.
   goToTop(): void {
     //this will provide smooth animation for the scroll
     this.top.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
 
+  // The "Select a Team by Organization" Dropdown
   onSelect(value) {
-    console.log(value);
     this.teamService.getTeamsByLeague(value).subscribe(data => {
-      //console.log("DATA");
-      //console.log(data);
       this.teams = data;
-      // console.log("TEAMS");
-      // console.log(this.teams);
       this.isShown = true;
     });
   }
 
+  // The "Select a Team by Craft" Dropdown
   onSelectCraft(value) {
-    console.log(value);
     this.teamService.getTeamsByTeamType(value).subscribe(data => {
       this.teams = data;
       this.isShown = true;
     });
   }
 
+  // The "View ALL Teams" button
   showAllTeams() {
     this.teamService.getTeams().subscribe(data => {
     this.teams = data;
   });
     this.isShown = true;
   }
-  
+
+  // The "Reset List" button
   hideAllTeams() {
     this.isShown = false;
   }
