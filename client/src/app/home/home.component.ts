@@ -11,6 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  // For the goToTop function
   @ViewChild('top', {static: false}) top: ElementRef
 
   sub: any;
@@ -42,15 +43,18 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  // This function is for the "Back to top" button.
   goToTop(): void {
     //this will provide smooth animation for the scroll
     this.top.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
 
+  // This function routes the user to the Login Page.
   goLogin(): void {
     this.router.navigate(['login']);
   }
 
+  // This function routes the user to the Patterns Page.
   goPatterns(): void {
     this.router.navigate(['patterns'], {queryParams: {ID: this.ID, username: this.username}});
   }

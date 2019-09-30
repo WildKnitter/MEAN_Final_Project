@@ -23,9 +23,9 @@ export class RegisterComponent implements OnInit {
   // create instance of UserService
   constructor(private userService: UserService, private router: Router) {}
 
-
   ngOnInit() { }
 
+  // Validation for Registration
   onSubmit(): void {
     if (this.username == '') {
       this.errMsg = 'User name is required.';
@@ -61,6 +61,7 @@ export class RegisterComponent implements OnInit {
     }
   }
 
+  // Resets the fields
   onReset(): void {
     this.username = '';
     this.email = '';

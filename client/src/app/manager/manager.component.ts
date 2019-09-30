@@ -41,6 +41,7 @@ export class ManagerComponent implements OnInit {
       
   } // end of ngOnInit()
 
+  // Validation for the Update Info submit.
   onSubmit(): void {
     if (this.email == '') {
       this.errMsg = 'Email Address is required.';
@@ -67,6 +68,7 @@ export class ManagerComponent implements OnInit {
     }
   } // end of onSubmit
 
+  // Resets the fields.
   onReset(): void {
     this.email = '';
     this.confirmEmail = '';
@@ -74,10 +76,12 @@ export class ManagerComponent implements OnInit {
     this.errMsg = '';
   } // end of onReset
   
+  // Hides and shows "Member Delete and Cancel container" div.
   toggleShow(): void {
     this.isShown = ! this.isShown;
   }
 
+  // Delete the user and reset the authorization statuses.
   onDelete(): void {
       // Call UserService to delete User
       this.userService.deleteUser(this.ID).subscribe(data => {

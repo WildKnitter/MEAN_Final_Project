@@ -23,6 +23,8 @@ constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit() {
   }
+
+  //Validates the Log In Submit.
   onSubmit(): void 
   {
     if (this.username == '') 
@@ -32,8 +34,7 @@ constructor(private userService: UserService, private router: Router) {}
     } else if (this.password == '') {
       this.errMsg = 'Password is required.';
       this.error = true;
-    } else 
-    {
+    } else {
       this.error = false;
       this.errMsg = '';
 
@@ -68,7 +69,7 @@ constructor(private userService: UserService, private router: Router) {}
     this.router.navigate(['register']);
   }
 
-  // Resets the Login Page so that the user can try loggin in again.
+  // Resets the Login Page so that the user can try logging in again.
   onReset(): void {
     this.username = '';
     this.password = '';

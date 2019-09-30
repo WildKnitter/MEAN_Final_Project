@@ -8,6 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class PatternsComponent implements OnInit {
 
+  // For the goToTop function
   @ViewChild('top', {static: false}) top: ElementRef
 
   sub: any;
@@ -31,21 +32,25 @@ export class PatternsComponent implements OnInit {
      })
   }
 
+  // This function is for the "Back to top" button.
   goToTop(): void {
     //this will provide smooth animation for the scroll
     this.top.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
   
+  // This function displays the knitting patterns.
   showKnitPatterns() {
     this.isShownKnitting = true; 
     this.isShownCrocheting = false; 
   }
 
+   // This function displays the crocheting patterns.
   showCrochetPatterns() {
     this.isShownKnitting = false; 
     this.isShownCrocheting = true; 
   }
 
+   // This function hides all the patterns.
   hidePatterns() {
    this.isShownKnitting = false; 
    this.isShownCrocheting = false; 
