@@ -11,7 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  @ViewChild('top') top: ElementRef
+  @ViewChild('top', {static: false}) top: ElementRef
 
   sub: any;
   ID: number = 0;

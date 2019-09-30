@@ -1,7 +1,7 @@
 <!--Register Page for the Hip to be Square Capstone Project, using Angular/Typescript.-->
 
 <div>
-    <form class="form-register" id="form-register" method="POST" action="/login">
+    <form class="form-register" id="form-register">
         <img class="mb-4" src="assets/img/lock.png" alt="Lock Sign" id="lock" />
 
         <h1 class="h3 mb-3 font-weight-normal">Register Here!</h1>
@@ -20,10 +20,6 @@
 
         <button class="btn btn-lg btn-primary btn-block" type="submit" id="submitBtn" (click)="onSubmit()">Register</button>
         <button class="btn btn-lg btn-secondary btn-block" type="button" id="resetBtn" (click)="onReset()">Reset</button>
-
-        <br />
-        <div class="alert alert-success hidden" role="alert" id="msg"></div>
-
     </form>
 </div>
 <div class="container">

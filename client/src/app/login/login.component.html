@@ -12,10 +12,9 @@
         <input type="password" id="password" name="password" [(ngModel)]="password" class="form-control" placeholder="Password" required />
 
         <button class="btn btn-lg btn-primary btn-block" type="submit" id="submitBtn" (click)="onSubmit()">Log in</button>
-        <a class="btn btn-lg btn-success btn-block" href="/register" role="button">Not a Member?  Register Here!</a>
+        <button class="btn btn-lg btn-success btn-block" type="submit" id="registerBtn" (click)="goRegister()">Not a Member?  Register Here!</button>
         <button class="btn btn-lg btn-secondary btn-block" type="button" id="resetBtn" (click)="onReset()">Reset</button>
         <br />
-        <div class="alert alert-success hidden" role="alert" id="msg"></div>
     </form>
 </div>
 <div class="container">

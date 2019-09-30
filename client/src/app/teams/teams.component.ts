@@ -13,7 +13,7 @@ import { UserService } from './../providers/user.service';
 })
 export class TeamsComponent implements OnInit {
 
-  @ViewChild('top') top: ElementRef
+  @ViewChild('top', {static: false}) top: ElementRef
 
   sub: any;
   ID: number = 0;
