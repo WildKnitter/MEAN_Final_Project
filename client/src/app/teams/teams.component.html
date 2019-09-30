@@ -1,7 +1,7 @@
 <!--Teams (Landing) page for the Hip to be Square Capstone Project, using Angular/Typescript.-->
 
 <!--Heading-->
-<div class="container">
+<div class="container" #top>
     <header>
         <h1 class="display-3 regularHeader">Hip to be Square!</h1>
         <h2 class="regularSubHeader">Crafting Teams</h2>
@@ -60,7 +60,7 @@
                     <td>{{team.TeamType}}</td>
                     <td>{{team.TeamGender}}</td>
                     <td>{{team.TeamName}}</td>
-                    <td><a class="mr-2" title="View" href="#"><i class="fas fa-binoculars fa-lg" aria-hidden="true"></i></a><a class="edit mr-2" title="Edit" href="#"><i class="fa fa-pencil-alt fa-lg" aria-hidden="true"></i></a></td>
+                    <td><a class="mr-2" title="View"><i class="fas fa-binoculars fa-lg" aria-hidden="true"></i></a><a class="edit mr-2" title="Edit"><i class="fa fa-pencil-alt fa-lg" aria-hidden="true"></i></a></td>
                 </tr>
             </tbody>
         </table>
@@ -74,3 +74,6 @@
     </div>
 </div>
 <!--row end-->
+
+<!--Go to top Button-->
+<button class="btn btn-sm btn-outline-purple float-right" id="backToTop" (click)="goToTop()" type="submit">Back to top</button>

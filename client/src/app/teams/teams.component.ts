@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LeagueService } from '../providers/league.service';
 import { TeamService } from '../providers/team.service';
@@ -12,6 +12,8 @@ import { UserService } from './../providers/user.service';
   styleUrls: ['./teams.component.css']
 })
 export class TeamsComponent implements OnInit {
+
+  @ViewChild('top') top: ElementRef
 
   sub: any;
   ID: number = 0;
@@ -51,6 +53,11 @@ export class TeamsComponent implements OnInit {
     this.teams = data;
   });
   } // end of ngOnInit()
+
+  goToTop(): void {
+    //this will provide smooth animation for the scroll
+    this.top.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
 
   onSelect(value) {
     console.log(value);
