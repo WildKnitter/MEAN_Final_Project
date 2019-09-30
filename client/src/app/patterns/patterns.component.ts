@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef  } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,6 +7,8 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./patterns.component.css']
 })
 export class PatternsComponent implements OnInit {
+
+  @ViewChild('top') top: ElementRef
 
   sub: any;
   ID: number = 0;
@@ -29,6 +31,11 @@ export class PatternsComponent implements OnInit {
      })
   }
 
+  goToTop(): void {
+    //this will provide smooth animation for the scroll
+    this.top.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
+  
   showKnitPatterns() {
     this.isShownKnitting = true; 
     this.isShownCrocheting = false; 

@@ -243,6 +243,11 @@ footer {
     background-color: purple;
 }
 
+.btn-outline-purple {
+    color: purple;
+    border-color: purple;
+}
+
 #memberCount {
     font-weight: bold;
     font-size: 1.1em;
