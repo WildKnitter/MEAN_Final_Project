@@ -39,14 +39,14 @@ export class UserService {
   /* PUT users for editing user. */
   // PUT http://localhost:3000/users/edituserprofile/:ID
   editUser(ID: number,email: string): Observable<any> {
-    return this.http.put(`${this.usersEndpoint}editUserprofile/${ID}`, { email: email }, this.httpOptions)
+    return this.http.put(`${this.usersEndpoint}edituserprofile/${ID}`, { email: email }, this.httpOptions)
       .pipe(map(res => <any[]>res));
   }
 
   /* DELETE user. */
   // DELETE http://localhost:3000/users/edituserprofile/:ID
   deleteUser(ID: number) {
-    return this.http.delete(`${this.usersEndpoint}editUserprofile/${ID}`, this.httpOptions)
+    return this.http.delete(`${this.usersEndpoint}edituserprofile/${ID}`, this.httpOptions)
       .pipe(map(res => <any[]>res));
   }
 
