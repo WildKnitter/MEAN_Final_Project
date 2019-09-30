@@ -40,7 +40,7 @@ constructor(private userService: UserService, private router: Router) {}
       // Call UserService authenticate the user
       this.userService.login(this.username, this.password).subscribe(data => {
         if (data['error']) {
-          this.errMsg = 'Login unsuccessful.';
+          this.errMsg = 'Login unsuccessful. Please check that your username and password are correct.';
           this.error = true;
           this.userService.setAuthStatus(false);
         } else {          
@@ -72,7 +72,6 @@ constructor(private userService: UserService, private router: Router) {}
   onReset(): void {
     this.username = '';
     this.password = '';
-
     this.error = false;
     this.errMsg = '';
   } // end onReset()

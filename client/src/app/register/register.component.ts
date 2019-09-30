@@ -66,7 +66,6 @@ export class RegisterComponent implements OnInit {
     this.email = '';
     this.password = '';
     this.confirmPass = '';
-
     this.error = false;
     this.errMsg = '';
   }
