@@ -18,11 +18,11 @@
 
     <!--Buttons to select Knitting or Crocheting Patterns -->
     <div class="row justify-content-md-center">
-        <div class="col-md-5 offset-md-1">
+        <div class="col-md-3">
             <div id="craftButtons" class="container">
-                <button class="btn btn-md btn-success" id="btnKnitting" type="submit" (click)="showKnitPatterns()">Knitting Patterns</button>
-                <button class="btn btn-md btn-primary" id="btnCrocheting" type="submit" (click)="showCrochetPatterns()">Crocheting Patterns</button>
-                <button class="btn btn-md btn-secondary" id="btnReset" type="submit" (click)="hidePatterns()">Reset</button>
+                <button class="btn btn-md btn-success btn-block" id="btnKnitting" type="submit" (click)="showKnitPatterns()">Knitting Patterns</button>
+                <button class="btn btn-md btn-primary btn-block" id="btnCrocheting" type="submit" (click)="showCrochetPatterns()">Crocheting Patterns</button>
+                <button class="btn btn-md btn-secondary btn-block" id="btnReset" type="submit" (click)="hidePatterns()">Reset</button>
             </div>
         </div>
     </div>
@@ -42,56 +42,44 @@
             </div>
         </div>
 
-        <div class="row justify-content-md-center">
-            <div class="col-md-3">
-                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">GARTER STITCH</h5>
-                        <p class="card-text">Cast on 35 stitches.</p>
-                        <p class="card-text">Knit every row until piece measures 8 inches.</p>
-                        <p class="card-text">Bind off.</p>
-                    </div>
+        <div class="card-deck">
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">GARTER STITCH</h5>
+                    <p class="card-text">Cast on 35 stitches.</p>
+                    <p class="card-text">Knit every row until piece measures 8 inches.</p>
+                    <p class="card-text">Bind off.</p>
                 </div>
             </div>
-
-            <div class="col-md-3">
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">STOCKINETTE STITCH</h5>
-                        <p class="card-text">Cast on 35 stitches.</p>
-                        <p class="card-text">Row 1: Knit all stitches.</p>
-                        <p class="card-text">Row 2: Purl all stitches.</p>
-                        <p class="card-text">Repeat these 2 rows until piece measures 8 inches.</p>
-                        <p class="card-text">Bind off.</p>
-                    </div>
+            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">STOCKINETTE STITCH</h5>
+                    <p class="card-text">Cast on 35 stitches.</p>
+                    <p class="card-text">Row 1: Knit all stitches.</p>
+                    <p class="card-text">Row 2: Purl all stitches.</p>
+                    <p class="card-text">Repeat these 2 rows until piece measures 8 inches.</p>
+                    <p class="card-text">Bind off.</p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">SEED STITCH</h5>
-                        <p class="card-text">Cast on 35 stitches.</p>
-                        <p class="card-text">Row 1: Knit 1 stitch, purl the next stitch, knit the next. Continue alternating stitches across the row.</p>
-                        <p class="card-text">Repeat this row until piece measures 8 inches.</p>
-                        <p class="card-text">Bind off.</p>
-                    </div>
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">SEED STITCH</h5>
+                    <p class="card-text">Cast on 35 stitches.</p>
+                    <p class="card-text">Row 1: Knit 1 stitch, purl the next stitch, knit the next. Continue alternating stitches across the row.</p>
+                    <p class="card-text">Repeat this row until piece measures 8 inches.</p>
+                    <p class="card-text">Bind off.</p>
                 </div>
             </div>
-        </div>
-
-        <div class="row justify-content-md-center">
-            <div class="col-md-3">
-                <div class="card text-white bg-purple mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">DOUBLE SEED STITCH</h5>
-                        <p class="card-text">Cast on 35 stitches.</p>
-                        <p class="card-text">Row 1: Knit 1 stitch, purl the next stitch, knit the next. Continue alternating stitches across the row.</p>
-                        <p class="card-text">Row 2: Purl 1, knit 1, purl 1, alternating stitches across the row.</p>
-                        <p class="card-text">Row 3: Work the same as Row 2.</p>
-                        <p class="card-text">Row 4: Work the same as Row 1.</p>
-                        <p class="card-text">Repeat this row until piece measures 8 inches.</p>
-                        <p class="card-text">Bind off.</p>
-                    </div>
+            <div class="card text-white bg-purple mb-3" style="max-width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">DOUBLE SEED STITCH</h5>
+                    <p class="card-text">Cast on 35 stitches.</p>
+                    <p class="card-text">Row 1: Knit 1 stitch, purl the next stitch, knit the next. Continue alternating stitches across the row.</p>
+                    <p class="card-text">Row 2: Purl 1, knit 1, purl 1, alternating stitches across the row.</p>
+                    <p class="card-text">Row 3: Work the same as Row 2.</p>
+                    <p class="card-text">Row 4: Work the same as Row 1.</p>
+                    <p class="card-text">Repeat this row until piece measures 8 inches.</p>
+                    <p class="card-text">Bind off.</p>
                 </div>
             </div>
         </div>
@@ -112,7 +100,7 @@
             </div>
         </div>
 
-        <div class="row justify-content-md-center">
+        <div class="card-deck row justify-content-md-center">
             <div class="col-md-3">
                 <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
                     <div class="card-body">

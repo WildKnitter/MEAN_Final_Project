@@ -50,7 +50,7 @@ usersController.postUsersLogin = (req, res) => {
                 console.log(req.session.is_admin);
                 res.json(user);
             } else {
-                res.json('[]');
+                res.json({ "error": "Posting Users error" });
             }
         })
         .catch((err) => {
@@ -71,7 +71,7 @@ usersController.postUsersRegister = (req, res) => {
             if (user) {
                 res.json(user);
             } else {
-                res.json('[]');
+                res.json({ "error": "User not created" });
             }
         })
         .catch((err) => {

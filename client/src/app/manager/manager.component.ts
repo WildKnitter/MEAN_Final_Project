@@ -70,6 +70,8 @@ export class ManagerComponent implements OnInit {
   onReset(): void {
     this.email = '';
     this.confirmEmail = '';
+    this.error = false;
+    this.errMsg = '';
   } // end of onReset
   
   toggleShow(): void {
