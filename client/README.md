@@ -36,6 +36,18 @@ http://localhost:4200/admin
 - Patterns Page
 http://localhost:4200/patterns
 
+> NOTE: Any page that is only accessable to a logged-in user also has
+> the user ID and username passed via queryParams.  
+>
+> Example:
+> http://http://localhost:4200/teams?ID=4&username=curly
+> 
+> This effectively prevents a non-logged-in user from accessing pages
+> that should only be available to logged-in users.  In addition, each of these
+> pages also calls for authentication, and if the user is not logged in (or in the 
+> case of the Admin Page, is not an admin), that user is routed back to the home page.
+>
+
 ## Technologies
 - HTML5/CSS3/Bootstrap4
 - Angular
