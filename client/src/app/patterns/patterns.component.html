@@ -1,10 +1,8 @@
-<app-nav></app-nav>
-
 <!--Patterns Page for the Hip to be Square Capstone Project, using Angular/Typescript.-->
 
 <main>
     <!--Heading-->
-    <div class="container">
+    <div class="container" #top>
         <header>
             <h1 class="display-3 regularHeader">Hip to be Square!</h1>
             <h2 class="regularSubHeader">Basic Square Patterns</h2>
@@ -167,3 +165,5 @@
         </div>
     </div>
     <!--row end-->
+
+    <button class="btn btn-sm btn-outline-purple float-right" id="backToTop" (click)="goToTop()" type="submit">Back to top</button>

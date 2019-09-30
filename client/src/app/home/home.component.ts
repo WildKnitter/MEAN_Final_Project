@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { LeagueService } from '../providers/league.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -10,6 +10,8 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  @ViewChild('top') top: ElementRef
 
   sub: any;
   ID: number = 0;
@@ -40,8 +42,13 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  goHome(): void {
-    this.router.navigate(['/'], {queryParams: {ID: this.ID, username: this.username}});
+  goToTop(): void {
+    //this will provide smooth animation for the scroll
+    this.top.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
+
+  goLogin(): void {
+    this.router.navigate(['login']);
   }
 
   goPatterns(): void {

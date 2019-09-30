@@ -1,5 +1,5 @@
 <!--HOME Page for the Hip to be Square Capstone Project, using Angular/Typescript.-->
-<app-nav></app-nav>
+<div #top></div>
 
 <!-- Carousel Indicators -->
 <main>
@@ -18,7 +18,7 @@
                     <div class="carousel-caption text-left">
                         <h1>Hip to be Square!</h1>
                         <p>Make a Square, Warm a Heart!</p>
-                        <p><a class="btn btn-lg btn-success" href="/login" role="button">Sign up today!</a></p>
+                        <p><button class="btn btn-lg btn-success" (click)="goPatterns()" type="submit">Sign up today!</button></p>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Crocheting</h1>
-                        <p><a class="btn btn-lg btn-info" href="/login" role="button">Sign up today!</a></p>
+                        <p><button class="btn btn-lg btn-info" (click)="goPatterns()" type="submit">Sign up today!</button></p>
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                 <div class="container">
                     <div class="carousel-caption text-right">
                         <h1>Knitting</h1>
-                        <p><a class="btn btn-lg btn-primary" href="/login" role="button">Sign up today!</a></p>
+                        <p><button class="btn btn-lg btn-primary" (click)="goPatterns()" type="submit">Sign up today!</button></p>
                     </div>
                 </div>
             </div>
@@ -91,10 +91,7 @@
         </div>
     </div>
 
+    <button class="btn btn-sm btn-outline-purple float-right" id="backToTop" (click)="goToTop()" type="submit">Back to top</button>
     <hr class="featurette-divider">
     <!-- /END THE FEATURETTES -->
 </main>
-
-<section>
-    <a (click)="goHome()">Back to top</a>
-</section>
