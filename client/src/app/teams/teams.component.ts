@@ -23,12 +23,11 @@ export class TeamsComponent implements OnInit {
   teams: Array<string> = [];
 
   // Showing ALL Teams - hidden by default
-  isShown: boolean = false ; 
+  isShown: boolean = false; 
 
   constructor(private leagueService: LeagueService, private teamService: TeamService, private userService: UserService, private route: ActivatedRoute, private router: Router) { }
 
-  ngOnInit() 
-  {
+  ngOnInit() {
 
     // get userid from Query Params
     this.sub = this.route
@@ -38,8 +37,7 @@ export class TeamsComponent implements OnInit {
         this.username = params['username'];
       })
 
-    if (!this.userService.getAuthStatus())
-     {
+    if (!this.userService.getAuthStatus()) {
        this.router.navigate(['/']);
      }
   
@@ -54,15 +52,15 @@ export class TeamsComponent implements OnInit {
   });
   } // end of ngOnInit()
 
-  toggleShowAll(): void {
-    this.isShown = ! this.isShown;
-  }
-
   onSelect(value) {
     console.log(value);
     this.teamService.getTeamsByLeague(value).subscribe(data => {
+      //console.log("DATA");
+      //console.log(data);
       this.teams = data;
-      this.isShown;
+      // console.log("TEAMS");
+      // console.log(this.teams);
+      this.isShown = true;
     });
   }
 
@@ -70,8 +68,19 @@ export class TeamsComponent implements OnInit {
     console.log(value);
     this.teamService.getTeamsByTeamType(value).subscribe(data => {
       this.teams = data;
-      this.isShown;
+      this.isShown = true;
     });
+  }
+
+  showAllTeams() {
+    this.teamService.getTeams().subscribe(data => {
+    this.teams = data;
+  });
+    this.isShown = true;
+  }
+  
+  hideAllTeams() {
+    this.isShown = false;
   }
 
 } // end of export 

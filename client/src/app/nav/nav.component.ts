@@ -37,6 +37,10 @@ export class NavComponent implements OnInit {
     this.router.navigate(['/'], {queryParams: {ID: this.ID, username: this.username}});
   }
   
+  goPatterns(): void {
+    this.router.navigate(['patterns'], {queryParams: {ID: this.ID, username: this.username}});
+  }
+  
   goTeams(): void {
     this.router.navigate(['teams'], {queryParams: {ID: this.ID, username: this.username}});
   }

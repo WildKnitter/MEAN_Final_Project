@@ -18,9 +18,11 @@ import { RegisterComponent } from './register/register.component';
 import { ManagerComponent } from './manager/manager.component';
 import { AdminComponent } from './admin/admin.component';
 import { TeamsComponent } from './teams/teams.component';
+import { PatternsComponent } from './patterns/patterns.component';
 
 const appRoutes: Routes = [
    {path: '', component: HomeComponent},
+   {path: 'patterns', component: PatternsComponent},
    {path: 'login', component: LoginComponent},
    {path: 'register', component: RegisterComponent},
    {path: 'manager', component: ManagerComponent},
@@ -38,7 +40,8 @@ const appRoutes: Routes = [
     RegisterComponent,
     ManagerComponent,
     AdminComponent,
-    TeamsComponent
+    TeamsComponent,
+    PatternsComponent
   ],
   imports: [
     BrowserModule,
