@@ -5,8 +5,7 @@ Client (Angular) for Capstone
 * **Pamela W Belknap** - HartCode Academy 2019
 
 ## Purpose and goals of this site
-- To display the leagues, teams, and members for a charity knitting and crocheting drive.
-- To sign up teams and members for the drive.
+- To display the leagues and teams for a charity knitting and crocheting drive.
 - To register, edit, and delete site users. 
 
 ## Audience
@@ -14,10 +13,8 @@ Client (Angular) for Capstone
 - Prospective and current knitting and crocheting team members  
 
 - ### What do they want from my site?
-- To view the leagues, teams, and members for a charity knitting and crocheting drive.
-- To sign up teams and members for the drive.
-- To edit team and member information.
-- To be able to unregister members and delete a team.
+- To view the leagues and teams for a charity knitting and crocheting drive.
+- To be able to register, edit, and unregister users.
 - To access some simple knitting and crocheting patterns to get started with their squares.
 
 ## Site Pages:
@@ -31,7 +28,7 @@ http://localhost:4200/register
 http://localhost:4200/manager
 - Teams Page (Landing Page - cannot access unless logged in)
 http://localhost:4200/teams
-- Admin Page (Details non-admin users - cannot access unless logged in and user is an admin)
+- Admin Page (Details non-admin users - cannot access unless logged in and the user is an admin)
 http://localhost:4200/admin
 - Patterns Page
 http://localhost:4200/patterns
@@ -50,8 +47,7 @@ http://localhost:4200/patterns
 
 ## Technologies
 - HTML5/CSS3/Bootstrap4
-- Angular
-- Node.js
+- Angular/Typescript
 
 # Steps to create
 + In the Terminal, in the client dir, execute the following:
