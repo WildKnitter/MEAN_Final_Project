@@ -50,6 +50,9 @@ http://localhost:3000/teams
 - Node.js
 - ProgreSQL
 
+# NOTE
+This assumes that the user has Node.js installed globally on their machine and that they have done a git clone or have otherwise copied the MEAN_Final_Project into a folder.
+
 ### PostgreSQL
 
 Note: This will use [PostgreSQL](https://www.postgresql.org/) in place of [MongoDB](https://www.mongodb.com/) for our Database. 
@@ -65,7 +68,7 @@ $ npm run dev
 
 ## PostgreSQL Setup
 + Create PostgreSQL DB User as defined above
-+ Create a DB named demo in PostgreSQL using [pgAdmin4](http://127.0.0.1:49799/browser/)
++ Create a DB named **hca** in PostgreSQL using [pgAdmin4](http://127.0.0.1:49799/browser/)
 + Execute the following to build and populate the DB with test data
 ```
 $ cd db

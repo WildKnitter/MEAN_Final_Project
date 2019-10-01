@@ -94,8 +94,13 @@ found 0 vulnerabilities
           "styles.css"
         ]
 ```
-
 + Reload the page to confirm Bootstrap has been applied.
+
+Will also need to install:
+```
+npm install -g @angular/cli@latest
+```
+
 
 # Client
 

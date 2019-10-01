@@ -1,6 +1,11 @@
 // Create Users Model Class
 export class Users {
-    // properties
+
+// NOTE:  The SELECT in Postgresql is:
+//SELECT "ID", username, email, password, is_admin, "createdAt", "updatedAt"
+// FROM public.users;
+
+// properties
     public ID: number;
     public username: string = '';
     public email: string = '';
