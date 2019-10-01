@@ -1,4 +1,4 @@
-# MEAN_Lab5: Server for the Capstone Project - Hip to be Square!
+# MEAN_Final_Project: Server for the Capstone Project - Hip to be Square!
 Server for Capstone - Node/Express/PostgreSQL/Sequelize
 
 ## Site Author
@@ -46,9 +46,6 @@ GET http://localhost:3000/teams/data/byteamtype/:id
 DELETE http://localhost:3000/teams/data/:id 
 
 ## Technologies
-- HTML5/CSS3/Bootstrap4
-- JavaScript
-- jQuery
 - Node.js
 - ProgreSQL
 

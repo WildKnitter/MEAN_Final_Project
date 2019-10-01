@@ -6,8 +6,7 @@
 * **Pamela W Belknap** - HartCode Academy 2019
 
 ## Purpose and goals of this site
-- To display the leagues, teams, and members for a charity knitting and crocheting drive.
-- To sign up teams and members for the drive.
+- To display the leagues and teams for a charity knitting and crocheting drive.
 - To register, edit, and delete site users. 
 
 ## Audience
@@ -15,10 +14,8 @@
 - Prospective and current knitting and crocheting team members  
 
 - ### What do they want from my site?
-- To view the leagues, teams, and members for a charity knitting and crocheting drive.
-- To sign up teams and members for the drive.
-- To edit team and member information.
-- To be able to unregister members and delete a team.
+- To view the leagues and teams for a charity knitting and crocheting drive.
+- To be able to register, edit, and unregister users.
 - To access some simple knitting and crocheting patterns to get started with their squares.
 
 ## Site Pages:
@@ -86,6 +83,18 @@ webpack: Compiled successfully.
 ```
 - To view the home page in the browser, you would go to:
 http://localhost:4200/
+
+
+## HartCode Academy Acknowledgments
+
+* Dana Wyatt (for her fantastic instruction on JavaScript, jQuery, and all things coding!)
+* Rob Frenette (for his instruction on HTML, CSS, Angular, Typescript, Node.js, MySQL; and for his instance on standards of excellence.)
+* Denise Fraser (for checking in with us, arranging for visitors, and being a great manager!)
+* Renisa Sizer (for checking in with us, and arranging for visitors)
+* Franca Lewis (for supporting us and arranging for visitors)
+* Joe Rybczyk (for paving the way for me to go to HartCode Academy!)
+* To ALL my fellow students - it's been an exhausting, but fun adventure!
+
 
 
 
