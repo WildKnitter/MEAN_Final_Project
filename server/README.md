@@ -1,4 +1,4 @@
-# MEAN_Lab5: Server for the Capstone Project - Hip to be Square!
+# MEAN_Final_Project: Server for the Capstone Project - Hip to be Square!
 Server for Capstone - Node/Express/PostgreSQL/Sequelize
 
 ## Site Author
@@ -46,9 +46,6 @@ GET http://localhost:3000/teams/data/byteamtype/:id
 DELETE http://localhost:3000/teams/data/:id 
 
 ## Technologies
-- HTML5/CSS3/Bootstrap4
-- JavaScript
-- jQuery
 - Node.js
 - ProgreSQL
 
@@ -63,17 +60,19 @@ This example assumes a PostgreSQL User with the following
 
 
 ## Server and app setup and start
-- This assumes that the user has Node.js installed globally on their machine.
+This assumes that the user has Node.js installed globally on their machine and that they have done a git clone or have otherwise copied the MEAN_Final_Project into a folder.
+
+- In the command prompt:
+
 ```
-$ mkdir server
 $ cd server
-$ npm init
 $ npm install 
 ```
+This will install the npm packages from package.json.
 
 ## PostgreSQL Setup
 + Create PostgreSQL DB User as defined above
-+ Create a DB named demo in PostgreSQL using [pgAdmin4](http://127.0.0.1:49799/browser/)
++ Create a DB named **hca** in PostgreSQL using [pgAdmin4](http://127.0.0.1:49799/browser/)
 + Execute the following to build and populate the DB with test data
 ```
 $ cd db
